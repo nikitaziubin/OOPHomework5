@@ -1,10 +1,12 @@
 ﻿
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Task5
 {
     internal abstract class Item
     {
+        //item shoukd not contain DataGridView only numbers
         private int price;
         private string countryOfOrigin;
         private string productName; // todo
@@ -21,19 +23,21 @@ namespace Task5
             this.productName = productDescription;
             this.productDescription = description;
         }
-        public abstract List<Object> getList();
-        
-        public void getInformation()
+        public virtual List<Object> getList()
         {
             List<Object> list = new List<Object>();
-            
             list.Add(productName);
             list.Add(price);
             list.Add(countryOfOrigin);
             list.Add(productDescription);
             list.Add(description);
-            list.AddRange(getList());
-            dataGridView1.Rows.Add(list.ToArray());
+            return list; 
+        }
+        
+        public void getInformation()
+        {
+
+            dataGridView1.Rows.Add(getList().ToArray());
         }
 
     }

@@ -6,6 +6,7 @@ namespace Task5
     {
         public Form1()
         {
+            
             InitializeComponent();
             List<Item> itemList = new List<Item>();
             //itemList.Add(new Book(dataGridView1, new Random().Next(1, 10), "Ukraine", "Book", "20.05.2022", "This is Book", new Random().Next(1, 10), "UkrKniga", "Franko"));

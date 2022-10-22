@@ -24,11 +24,11 @@ namespace Task5
         public override List<Object> getList()
         {
             List<Object> listBook = new List<Object>();
+            listBook.AddRange(base.getList());
             listBook.Add(amountOfPages);
             listBook.Add(publisher);
             listBook.Add(authors);
             return listBook;
-
         }
     }
 }

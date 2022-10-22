@@ -19,9 +19,10 @@ namespace Task5
             this.unitOfMeasure = unitOfMeasure;
         }
         
-    public override List<Object> getList()
-            {
+        public override List<Object> getList()
+        {
             List<Object> listProduct = new List<Object>();
+            listProduct.AddRange(base.getList());
             listProduct.Add(" ");
             listProduct.Add(" ");
             listProduct.Add(" ");
@@ -29,6 +30,6 @@ namespace Task5
             listProduct.Add(quantity);
             listProduct.Add(unitOfMeasure);
             return listProduct;
-       }
         }
+    }
 }
